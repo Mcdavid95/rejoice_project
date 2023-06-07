@@ -167,13 +167,14 @@ if (!isset($_SESSION['user_id'])) {
         <option value="">Select Partner</option>
         <?php
         // Assuming you have already established a MySQL database connection
-        $host = 'localhost';
-        $username = 'recycle_user';
-        $password = 'recycle_user';
-        $database = 'recycle';
+        $host = 'containers-us-west-183.railway.app';
+        $username = 'root';
+        $password = '4Lb6grVi4JOm1zKF8KvI';
+        $database = 'railway';
+$port = '7949';
 
         // Create a MySQL database connection
-        $connection = mysqli_connect($host, $username, $password, $database);
+        $connection = mysqli_connect($host, $username, $password, $database, $port);
 
         // Retrieve the Recycle Partners from the database
         $query = "SELECT * FROM recycle_partners";
